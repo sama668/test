@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css\style.css">
+	<title>اندرویدکده | دانلود بازی ، برنامه های اندروید ، نرم افزار و بازی HD</title>
+</head>
+<body>
+<header>
+<div class="not-padding">
+<div class="header"></div>
+</div>
+</header>
+<nav>
+<div class="container">
+	
+<div class="logo-box col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="logo col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+<div class="text-logo col-lg-6 col-md-6 col-sm-6 col-xs-6"><span class="col-md-12 col-sm-12 col-xs-12">اندرویدکده</span><small class="col-md-12 col-sm-12 col-xs-12">خانه اندرویدی شما</small></div></div>
+
+	<ul class="col-lg-8 col-md-8 col-sm-8 col-xs-12 not-padding">
+		<li class="app"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-game-controller"></span>بازی</a></li>
+		<li class="game"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-apps"></span>برنامه</a></li>
+		<li class="rom"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-settings"></span>بخش رام</a></li>
+		<li class="news"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-quill"></span>خبرگزاری</a></li>
+		<li class="tutorial"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-graduate"></span><br/>آموزشگاه</a></li>
+		<li class="group"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-group"></span><br/>انجمن</a></li>
+		<li class="store"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-shopping-cart"></span>فروشگاه</a></li>
+		<li class="search"><span class="icon-search"></span></li>
+	</ul>
+	</div>
+
+</nav>
+
+<section class="main-content">
+	<div class="container">
+		<div class="banner-topleft col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left"></div>
+		<div class="banner-topright col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right">
+			<div class="banner-top"></div>
+			<div class="banner-bottom"></div>
+		</div>
+	</div>
+	<div class="float-nav closed">
+	<ul>
+    <li><a href="#">This Is</a></li>
+    <li><a href="#">Floating</a></li>
+    <li><a href="#">Navigation</a></li>
+  </ul>
+	<a class="toggle" href="#">+</a></div>
+</section>
+
+<footer></footer>
+
+
+
+  <script src="js/jquery-1.11.2.min.js"></script>
+
+
+</body>
+</html>
+  
+ <script type="text/javascript">
+
+    $(document).ready(function()
+    {
+	var floatNav = $('.float-nav'),
+    mainContent = $('.main-content');
+
+floatNav.on('click', function(e) {
+  $(this).toggleClass('closed');
+  e.stopPropagation();
+  e.preventDefault();
+});
+
+mainContent.on('click', function() {
+  if (!floatNav.hasClass('closed')) floatNav.addClass('closed');
+});
+});
+</script>
