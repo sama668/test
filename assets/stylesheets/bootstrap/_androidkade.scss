@@ -154,6 +154,7 @@ nav {
       a {
         display: inline-block;
         transition: all ease .25s;
+        color: #333;
       }
       &:hover {
         a {
@@ -165,7 +166,7 @@ nav {
         }
       }
       span {
-        color: #2e94a6;
+        color: #333;
         font-size: 33px;
       }
     }
