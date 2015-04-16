@@ -24,8 +24,8 @@
         </div>
 
         <ul class="col-lg-8 col-md-8 col-sm-8 col-xs-12 not-padding" id="mainMenu">
-            <li class="app"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-games"></span>بازی</a></li>
-            <li class="game"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-apps"></span>برنامه</a></li>
+            <li class="game"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-games"></span>بازی</a></li>
+            <li class="app"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-apps"></span>برنامه</a></li>
             <li class="rom"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-settings"></span>بخش رام</a></li>
             <li class="news"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-create"></span>خبرگزاری</a></li>
             <li class="tutorial"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-school"></span><br/>آموزشگاه</a>
@@ -34,72 +34,50 @@
             <li class="store"><a><span class="col-md-12 col-sm-12 col-xs-12 icon-shopping-cart"></span>فروشگاه</a></li>
             <li class="search"><span class="icon-search"></span></li>
         </ul>
-        <ul class="col-lg-8 col-md-8 col-sm-8 col-xs-12 not-padding" id="searchBox">
 
-            <li class="col-md-12"><input type="search" placeholder="به دنبال چه می گردید؟"><i class="icon-close"></i></li>
-        </ul>
     </div>
 
 </nav>
 
 <section class="main-content">
     <div class="container">
-        <div class="banner-topleft col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left"></div>
-        <div class="banner-topright col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right">
-            <div class="banner-top"></div>
-            <div class="banner-bottom"></div>
+        <div id="adBox">
+            <div class="banner-topleft col-lg-6 col-md-6 col-sm-6 col-xs-12"></div>
+            <div class="banner-topright col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="banner-top"></div>
+                <div class="banner-bottom"></div>
+            </div>
+        </div>
+        <div class="float-nav closed">
+            <ul>
+                <li><a href="#">This Is</a></li>
+                <li><a href="#">Floating</a></li>
+                <li><a href="#">Navigation</a></li>
+            </ul>
+            <a class="toggle" href="#">+</a>
+        </div>
+
+
+        <div id="searchBox" class="col-md-6 col-md-offset-3">
+            <h3>جستجو</h3>
+            <input type="search">
+
+            <p>در میان <strong>۴۱۲۰</strong> برنامه موجود در سایت</p>
+        </div>
+        <div id="game" class="col-md-12">
+            <div class="col-md-4"></div>
+            <div class="col-md-8"></div>
         </div>
     </div>
-    <div class="float-nav closed">
-        <ul>
-            <li><a href="#">This Is</a></li>
-            <li><a href="#">Floating</a></li>
-            <li><a href="#">Navigation</a></li>
-        </ul>
-        <a class="toggle" href="#">+</a></div>
+
 </section>
 
 <footer></footer>
 
 
 <script src="js/jquery-1.11.2.min.js"></script>
-
+<script src="js/app.js"></script>
 
 </body>
 </html>
 
-<script type="text/javascript">
-
-    $(document).ready(function () {
-        var floatNav = $('.float-nav');
-        var mainContent = $('.main-content');
-        var search = $('.search');
-
-
-        var androidKade = {
-
-            init: function init() {
-
-                search.on('click', function (e) {
-                    $('#mainMenu').hide();
-                    $('#seachBox').show();
-
-                })
-
-            }
-
-        }
-
-        androidKade.init();
-
-        floatNav.on('click', function (e) {
-            $(this).toggleClass('closed');
-            e.stopPropagation();
-            e.preventDefault();
-        });
-
-        mainContent.on('click', function () {
-            if (!floatNav.hasClass('closed')) floatNav.addClass('closed');
-        });
-    });
-</script>

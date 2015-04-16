@@ -78,29 +78,65 @@ nav {
     height: 97px;
     .store {
       border-top: 3px solid #b7cb41;
+      &:hover{
+      background: #b7cb41;
+    }
     }
     .game {
       border-top: 3px solid #001050;
+      &:hover{
+        background: #001050;
+      }
+    }
+    .gameBackground{
+      background: #001050;
     }
     .app {
       border-top: 3px solid #658092;
+        &:hover{
+        background: #658092;
+      }
+    }
+    .appBackground{
+      background: #658092;
     }
     .news {
       border-top: 3px solid #1aa1e1;
+        &:hover{
+        background: #1aa1e1;
+      }
     }
     .tutorial {
       border-top: 3px solid #fb8521;
+        &:hover{
+        background: #fb8521;
+      }
     }
     .rom {
       border-top: 3px solid #3f5ca9;
+        &:hover{
+        background: #3f5ca9;
+      }
     }
     .group {
       border-top: 3px solid #ce5043;
+        &:hover{
+        background: #ce5043;
+      }
     }
     .search {
       span {
         line-height: 50px;
         color: #333;
+      }
+    }
+    .active{
+      a {
+        transform: scale(1.2, 1.2);
+        color: #ffffff;
+      }
+      span{
+        color: #ffffff;
       }
     }
     li {
@@ -113,6 +149,7 @@ nav {
       height: 97px;
       font-size: 14px;
       vertical-align: top;
+      cursor: pointer;
 
       a {
         display: inline-block;
@@ -121,6 +158,10 @@ nav {
       &:hover {
         a {
           transform: scale(1.2, 1.2);
+          color: #ffffff;
+        }
+        span{
+          color: #ffffff;
         }
       }
       span {
@@ -219,16 +260,19 @@ section {
 }
 
 #searchBox {
+  display: none;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 40px;
 
   input {
-    background: none;
     border: none;
-    border-bottom: 1px solid #2B5380;
     width: 100%;
     line-height: 50px;
     outline: none;
+    border-radius: 5px;
   }
-  .icon-close{
+  .icon-close {
     position: absolute;
     left: 22px;
     top: 31px;
@@ -236,4 +280,8 @@ section {
     color: #999;
     cursor: pointer;
   }
+  strong{
+    color: #b3c833;
+  }
 }
+
