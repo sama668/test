@@ -20,8 +20,9 @@ $(document).ready(function () {
         },
         search: function () {
 
-            search.on('click', function (e) {
+            search.on('click mouseover', function (e) {
                 $(this).parent().find('.active').removeClass('active').css('background', '');
+                $('.menuBox').hide();
                 $('.main-content').css('border-top', '');
                 adBox.hide();
                 $('#searchBox').show();
@@ -29,12 +30,13 @@ $(document).ready(function () {
             })
         },
         menuView: function (color, dom) {
+            $('.menuBox').hide();
             dom.parent().find('.active').removeClass('active').css('background', '');
             dom.addClass('active').css('background', color);
             $('.main-content').css('border-top', '10px solid ' + color);
         },
         game: function () {
-            $('.game').on('click', function (e) {
+            $('.game').on('click mouseover', function (e) {
                 androidKade.menuView('#001050', $(this));
                 adBox.hide();
                 $('#game').show();
@@ -42,7 +44,7 @@ $(document).ready(function () {
 
         },
         app: function () {
-            $('.app').on('click', function (e) {
+            $('.app').on('click mouseover', function (e) {
                 androidKade.menuView('#658092', $(this))
                 adBox.hide();
                 $('#game').show();
@@ -50,7 +52,7 @@ $(document).ready(function () {
 
         },
         rom: function () {
-            $('.rom').on('click', function (e) {
+            $('.rom').on('click mouseover', function (e) {
                 androidKade.menuView('#3f5ca9', $(this));
                 adBox.hide();
                 $('#game').show();
@@ -58,7 +60,7 @@ $(document).ready(function () {
 
         },
         news: function () {
-            $('.news').on('click', function (e) {
+            $('.news').on('click mouseover', function (e) {
                 androidKade.menuView('#1aa1e1', $(this));
                 adBox.hide();
                 $('#game').show();
@@ -66,7 +68,7 @@ $(document).ready(function () {
 
         },
         tutorial: function () {
-            $('.tutorial').on('click', function (e) {
+            $('.tutorial').on('click mouseover', function (e) {
                 androidKade.menuView('#fb8521', $(this));
                 adBox.hide();
                 $('#game').show();
@@ -74,7 +76,7 @@ $(document).ready(function () {
 
         },
         group: function () {
-            $('.group').on('click', function (e) {
+            $('.group').on('click mouseover', function (e) {
                 androidKade.menuView('#ce5043', $(this));
                 adBox.hide();
                 $('#game').show();
@@ -82,7 +84,7 @@ $(document).ready(function () {
 
         },
         store: function () {
-            $('.store').on('click', function (e) {
+            $('.store').on('click mouseover', function (e) {
                 androidKade.menuView('#b7cb41', $(this));
                 adBox.hide();
                 $('#game').show();
